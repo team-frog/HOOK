@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Sat Oct 06 2018
+
+@author: AMS, FMC
+"""
+
 class fish:
 
     def __init__(self, type, dir, yo, WINDOW_WIDTH, pygame):
