@@ -47,16 +47,13 @@ class worm:
         self.state = 'living'
         
 
-    def move(self, dir, pos = 0):
+    def move(self, dir, pos = 0): # 'up' one step up, 'down' one step down, 'pos' one step towards pos (a possition at y exe)
         if dir == 'up' and self.vy > -self.VMAX:
             self.vy -= self.AC
         elif dir == 'down' and self.vy<self.VMAX:
             self.vy += self.AC
         else:  # when dir is selected to 'sel'
-            if pos < self.y:
-                self.vy -= self.AC
-            else:
-                self.vy += self.AC
+            self.vy = -(self.y-pos)/10
         # TODO: check the size of the screen
         self.y += self.vy                
 
