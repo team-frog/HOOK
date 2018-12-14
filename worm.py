@@ -19,7 +19,8 @@ class worm:
         self.pygame = pygame
         self.nimage = 0 # Index of the list to draw the image
         self.lastChange = 0
-        self.timeToChange = 400 # Time between animated images in miliseconds
+        self.timeToChange = 250 # Time between animated images in miliseconds
+        self.lineDisplacement = 10 # Los píxeles que se moverá la línea a la derecha
         
         if self.type=='player1':
             self.imageList = [pygame.image.load("assets/images/worm/expl1.png"),
@@ -36,12 +37,12 @@ class worm:
                 pygame.image.load("assets/images/worm/expl7.png"),
                 ] 
         else :
-            self.imageList = [pygame.image.load("assets/images/worm/expl8.png"),
-                pygame.image.load("assets/images/worm/expl8.png"),
-                pygame.image.load("assets/images/worm/expl8.png"),
-                pygame.image.load("assets/images/worm/expl9.png"),
-                pygame.image.load("assets/images/worm/expl9.png"),
-                ] 
+            self.imageList = [pygame.image.load("assets/images/worm/BIGbigworm.png"),
+                pygame.image.load("assets/images/worm/BIGmediumworm.png"),
+                pygame.image.load("assets/images/worm/BIGsmallworm.png"),
+                pygame.image.load("assets/images/worm/BIGmediumworm.png")              
+                ]
+            self.lineDisplacement = 8 # El desplazamiento de la línea a la derecha en el Type: 'sel'
         
         self.imageDead = pygame.image.load("assets/images/worm/expl8.png")
         self.state = 'living'
@@ -69,7 +70,7 @@ class worm:
         rect = imageToDraw.get_rect()
         rect.center = (self.x,self.y)
         surface.blit(imageToDraw,rect)
-        self.pygame.draw.line(surface, (20,239,12), [self.x, 0], [self.x, rect.top], 5)
+        self.pygame.draw.line(surface, (0,20,20), [self.x + self.lineDisplacement, 0], [self.x + self.lineDisplacement, rect.top], 2)
         
         
         
