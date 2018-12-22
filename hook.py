@@ -26,27 +26,31 @@ moveList = ['down', 'down']
 
 lastBackgroundChange = 0
 numberBackgroundImage = 0
+timeToChangeBackground = 100
 
+players = []
+fishes = []
+last_fish = 0
+score = 0
 
 # CONSTANTS
 
 WINDOW_WIDTH = 1000
 WINDOW_HEIGHT = 700
 LIMITS_GENERATION_FISHES = 100 # Para saber de donde a donde en la posición en y se pueden generar los peces
-FPS = 30
+FPS = 60
 POS_SEL = (int(WINDOW_WIDTH/4), int(WINDOW_HEIGHT/2))
 POS_ONLYME = (int(WINDOW_WIDTH/2), int(WINDOW_HEIGHT/2))
 POS_P1 = (int(2*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
 POS_P2 = (int(3*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
 TIME_BETWEEN_FISHES_O = 5000
-DIFFICULTY = 0.9 # The near to 1 the easier. It will multiply to time_between_fishes every time a new fish is created
-timeToChangeBackground = 100
+DIFFICULTY = 0.95 # The near to 1 the easier. It will multiply to time_between_fishes every time a new fish is created
+MIN_TIME_BETWEEN_FISHES = 1000
+POSX_SCORE = 100
+POSY_SCORE = 100
 
 # OBJECTS
 wormSelect = worm.worm('sel', POS_SEL, pygame)
-players = []
-fishes = []
-last_fish = 0
 
 
 # PYGAME OBJECTS
@@ -133,12 +137,20 @@ def random_type():
 def random_pos(window_height):
     return random.randint(LIMITS_GENERATION_FISHES, window_height - LIMITS_GENERATION_FISHES)
 
+def draw_score():
+    global score, surface
+    renderedText = textFont.render(str(score), 1, (255,0,255))
+    rect = renderedText.get_rect()
+    rect.center = (POSX_SCORE,POSY_SCORE)
+    surface.blit(renderedText,rect)
+    
 def inGame():
-    global surface, spacePressed, upPressed, time_between_fishes, last_fish, time_between_fishes, fishes
+    global surface, spacePressed, upPressed, time_between_fishes, last_fish, time_between_fishes, fishes, score
     if GAME_TIME.get_ticks() - last_fish > time_between_fishes:
         fishes.append(fish.fish(random_type(),random_dir(),random_pos(WINDOW_HEIGHT),WINDOW_WIDTH,pygame))
         last_fish = GAME_TIME.get_ticks()
-        time_between_fishes *= DIFFICULTY
+        if time_between_fishes > MIN_TIME_BETWEEN_FISHES:
+            time_between_fishes *= DIFFICULTY
         
     pressedList = [spacePressed, upPressed]       
     for i, player in enumerate(players):
@@ -151,6 +163,10 @@ def inGame():
     for i, enemy in enumerate(fishes):
         enemy.draw(surface, GAME_TIME.get_ticks())
         enemy.move()
+        if enemy.isDead(WINDOW_WIDTH):
+            fishes.remove(enemy)
+            score += 1
+    draw_score()
 
 
 # MAIN LOOP
