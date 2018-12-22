@@ -22,17 +22,22 @@ spacePressed = False
 upPressed = False
 downPressed = False
 
+moveList = ['down', 'down']
+
 
 # CONSTANTS
 
 WINDOW_WIDTH = 1000
 WINDOW_HEIGHT = 700
 FPS = 60
-YO_SEL = int(WINDOW_HEIGHT/2)
-XO_SEL = int(WINDOW_WIDTH/4)
+POS_SEL = (int(WINDOW_WIDTH/4), int(WINDOW_HEIGHT/2))
+POS_ONLYME = (int(WINDOW_WIDTH/2), int(WINDOW_HEIGHT/2))
+POS_P1 = (int(2*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
+POS_P2 = (int(3*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
 
 # OBJECTS
-wormSelect = worm.worm('sel', XO_SEL, YO_SEL, pygame)
+wormSelect = worm.worm('sel', POS_SEL, pygame)
+players = []
 
 # PYGAME OBJECTS
 
@@ -92,12 +97,15 @@ def menuScreen():
 
 
 def inGame():
-    global surface
-    renderedText = textFont.render("Jugando", 1, (255,255,255))
-    rect = renderedText.get_rect()
-    rect.center = (int(WINDOW_WIDTH/2),int(WINDOW_HEIGHT/2))
-    surface.blit(renderedText,rect)
-
+    global surface, spacePressed, upPressed
+    pressedList = [spacePressed, upPressed]       
+    for i, player in enumerate(players):
+        if pressedList[i]:
+            moveList[i] = 'up'
+        else:
+            moveList[i] = 'down'
+        player.draw(surface, GAME_TIME.get_ticks())
+        player.move(moveList[i])
 
 # MAIN LOOP
 
@@ -133,10 +141,16 @@ while True:
     elif state == 'menuScreen':
         menuScreen()
         if spacePressed:
+            if gameMode == 0: #only me
+                players.append(worm.worm('player1', POS_ONLYME, pygame))
+            else:
+                players.append(worm.worm('player1', POS_P1, pygame))
+                players.append(worm.worm('player2', POS_P2, pygame))
             spacePressed = False
             state = 'inGame'
     elif state == 'inGame':
         inGame()
+        
 
 
     clock.tick(FPS)
