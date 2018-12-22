@@ -24,6 +24,9 @@ downPressed = False
 
 moveList = ['down', 'down']
 
+lastBackgroundChange = 0
+numberBackgroundImage = 0
+
 
 # CONSTANTS
 
@@ -36,6 +39,7 @@ POS_ONLYME = (int(WINDOW_WIDTH/2), int(WINDOW_HEIGHT/2))
 POS_P1 = (int(2*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
 POS_P2 = (int(3*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
 TIME_BETWEEN_FISHES_O = 1000
+timeToChangeBackground = 100
 
 # OBJECTS
 wormSelect = worm.worm('sel', POS_SEL, pygame)
@@ -54,6 +58,17 @@ textFont = pygame.font.SysFont("monospace", 50)
 
 # LOAD IMAGES
 
+imagesBackground = [
+                pygame.image.load("assets/images/background/background1.png"),
+                pygame.image.load("assets/images/background/background2.png"),
+                pygame.image.load("assets/images/background/background3.png"),
+                pygame.image.load("assets/images/background/background4.png"),
+                pygame.image.load("assets/images/background/background5.png"),
+                pygame.image.load("assets/images/background/background4.png"),
+                pygame.image.load("assets/images/background/background3.png"),
+                pygame.image.load("assets/images/background/background2.png")
+            ]
+
 # LOAD SOUNDS
 
 #FUNCTIONS
@@ -63,8 +78,15 @@ def quitGame():
     sys.exit()
 
 def drawStage():
-    global surface
-    surface.fill((75, 44, 252))
+    global surface, GAME_TIME, WINDOW_HEIGHT, WINDOW_WIDTH, numberBackgroundImage, lastBackgroundChange
+    if GAME_TIME.get_ticks() - timeToChangeBackground > lastBackgroundChange:
+        lastBackgroundChange = GAME_TIME.get_ticks()
+        numberBackgroundImage += 1
+        numberBackgroundImage = numberBackgroundImage % len(imagesBackground)
+        imageToDraw = imagesBackground[numberBackgroundImage]
+        rect = imageToDraw.get_rect()
+        rect.center = (WINDOW_WIDTH/2, WINDOW_HEIGHT/2)
+        surface.blit(imageToDraw, rect)
 
 def welcomeScreen():
     global surface
