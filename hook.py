@@ -35,12 +35,14 @@ POS_SEL = (int(WINDOW_WIDTH/4), int(WINDOW_HEIGHT/2))
 POS_ONLYME = (int(WINDOW_WIDTH/2), int(WINDOW_HEIGHT/2))
 POS_P1 = (int(2*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
 POS_P2 = (int(3*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
-TIME_BETWEEN_FISHES_O = 1000
+TIME_BETWEEN_FISHES_O = 5000
+DIFFICULTY = 0.9 # The near to 1 the easier. It will multiply to time_between_fishes every time a new fish is created
 
 # OBJECTS
 wormSelect = worm.worm('sel', POS_SEL, pygame)
 players = []
 fishes = []
+last_fish = 0
 
 
 # PYGAME OBJECTS
@@ -98,10 +100,24 @@ def menuScreen():
     wormSelect.draw(surface, GAME_TIME.get_ticks())
     wormSelect.move('pos', int((gameMode+1)*WINDOW_HEIGHT/(len(messagesMenu)+1)))
 
+def random_dir():
+    posibility = ['right','left']
+    return random.choice(posibility)
 
+def random_type():
+    posibility = ['big','small']
+    return random.choice(posibility)
+
+def random_pos(window_height):
+    return random.randint(LIMITS_GENERATION_FISHES, window_height - LIMITS_GENERATION_FISHES)
 
 def inGame():
-    global surface, spacePressed, upPressed, time_between_fishes
+    global surface, spacePressed, upPressed, time_between_fishes, last_fish, time_between_fishes, fishes
+    if GAME_TIME.get_ticks() - last_fish > time_between_fishes:
+        fishes.append(fish.fish(random_type(),random_dir(),random_pos(WINDOW_HEIGHT),WINDOW_WIDTH,pygame))
+        last_fish = GAME_TIME.get_ticks()
+        time_between_fishes *= DIFFICULTY
+        
     pressedList = [spacePressed, upPressed]       
     for i, player in enumerate(players):
         if pressedList[i]:
@@ -113,14 +129,6 @@ def inGame():
     for i, enemy in enumerate(fishes):
         enemy.draw(surface, GAME_TIME.get_ticks())
         enemy.move()
-
-def random_dir():
-    posibility = ['right','left']
-    return random.choice(posibility)
-
-def random_pos(window_height):
-    return random.randint(LIMITS_GENERATION_FISHES, window_height - LIMITS_GENERATION_FISHES)
-
 
 
 # MAIN LOOP
