@@ -18,19 +18,23 @@ class fish:
         self.dir = dir
         self.y = yo
         self.numberImage = 0
-        self.lastChange = None
+        self.lastChange = 0
         self.timeToChange = 500
 
         if self.type=='big':
             self.imageList = [
-                #pygame.image.load("assets/images/enemies/bomb.png"),
-                #pygame.image.load("assets/images/enemies/bomb.png")
+                pygame.image.load("assets/images/worm/SMALLbigworm.png"),
+                pygame.image.load("assets/images/worm/SMALLmediumworm.png"),
+                pygame.image.load("assets/images/worm/SMALLsmallworm.png"),
+                pygame.image.load("assets/images/worm/SMALLmediumworm.png")
             ]
             self.vx = 5
         else:
             self.imageList = [
-                #pygame.image.load("assets/images/enemies/bomb.png"),
-                #pygame.image.load("assets/images/enemies/bomb.png")
+                pygame.image.load("assets/images/worm/SMALLbigworm.png"),
+                pygame.image.load("assets/images/worm/SMALLmediumworm.png"),
+                pygame.image.load("assets/images/worm/SMALLsmallworm.png"),
+                pygame.image.load("assets/images/worm/SMALLmediumworm.png")
             ]
             self.vx = 10
 
@@ -41,8 +45,10 @@ class fish:
             rect.center = (self.x, self.y)
             surface.blit(imageToDraw, rect)
         if actualTime - self.timeToChange > self.lastChange:
+            self.lastChange = actualTime
             self.numberImage += 1
-            self.numberImage = self.imageList % self.numberImage
+            self.numberImage = self.numberImage % len(self.imageList)
+            
 
     def move(self):
         if self.dir == 'right':

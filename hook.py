@@ -29,15 +29,19 @@ moveList = ['down', 'down']
 
 WINDOW_WIDTH = 1000
 WINDOW_HEIGHT = 700
+LIMITS_GENERATION_FISHES = 100 # Para saber de donde a donde en la posición en y se pueden generar los peces
 FPS = 60
 POS_SEL = (int(WINDOW_WIDTH/4), int(WINDOW_HEIGHT/2))
 POS_ONLYME = (int(WINDOW_WIDTH/2), int(WINDOW_HEIGHT/2))
 POS_P1 = (int(2*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
 POS_P2 = (int(3*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
+TIME_BETWEEN_FISHES_O = 1000
 
 # OBJECTS
 wormSelect = worm.worm('sel', POS_SEL, pygame)
 players = []
+fishes = []
+
 
 # PYGAME OBJECTS
 
@@ -97,7 +101,7 @@ def menuScreen():
 
 
 def inGame():
-    global surface, spacePressed, upPressed
+    global surface, spacePressed, upPressed, time_between_fishes
     pressedList = [spacePressed, upPressed]       
     for i, player in enumerate(players):
         if pressedList[i]:
@@ -106,6 +110,18 @@ def inGame():
             moveList[i] = 'down'
         player.draw(surface, GAME_TIME.get_ticks())
         player.move(moveList[i])
+    for i, enemy in enumerate(fishes):
+        enemy.draw(surface, GAME_TIME.get_ticks())
+        enemy.move()
+
+def random_dir():
+    posibility = ['right','left']
+    return random.choice(posibility)
+
+def random_pos(window_height):
+    return random.randint(LIMITS_GENERATION_FISHES, window_height - LIMITS_GENERATION_FISHES)
+
+
 
 # MAIN LOOP
 
@@ -147,6 +163,9 @@ while True:
                 players.append(worm.worm('player1', POS_P1, pygame))
                 players.append(worm.worm('player2', POS_P2, pygame))
             spacePressed = False
+            time_between_fishes = TIME_BETWEEN_FISHES_O # Init of time between fishes. It will be decreased progresivelly
+            last_fish = GAME_TIME.get_ticks()
+            fishes.append(fish.fish('big',random_dir(),random_pos(WINDOW_HEIGHT),WINDOW_WIDTH,pygame))
             state = 'inGame'
     elif state == 'inGame':
         inGame()
