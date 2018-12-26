@@ -19,22 +19,22 @@ class fish:
         self.y = yo
         self.numberImage = 0
         self.lastChange = 0
-        self.timeToChange = 500
+        self.timeToChange = 100
 
         if self.type=='big':
             self.imageList = [
-                pygame.image.load("assets/images/worm/SMALLbigworm.png"),
-                pygame.image.load("assets/images/worm/SMALLmediumworm.png"),
-                pygame.image.load("assets/images/worm/SMALLsmallworm.png"),
-                pygame.image.load("assets/images/worm/SMALLmediumworm.png")
+                pygame.image.load("assets/images/fishes/bigFish1.png"),
+                pygame.image.load("assets/images/fishes/bigFish2.png"),
+                pygame.image.load("assets/images/fishes/bigFish3.png"),
+                pygame.image.load("assets/images/fishes/bigFish2.png")
             ]
             self.vx = 5
         else:
             self.imageList = [
-                pygame.image.load("assets/images/worm/SMALLbigworm.png"),
-                pygame.image.load("assets/images/worm/SMALLmediumworm.png"),
-                pygame.image.load("assets/images/worm/SMALLsmallworm.png"),
-                pygame.image.load("assets/images/worm/SMALLmediumworm.png")
+                pygame.image.load("assets/images/fishes/smallFish1.png"),
+                pygame.image.load("assets/images/fishes/smallFish2.png"),
+                pygame.image.load("assets/images/fishes/smallFish3.png"),
+                pygame.image.load("assets/images/fishes/smallFish2.png")
             ]
             self.vx = 10
 
