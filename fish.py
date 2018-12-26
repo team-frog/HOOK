@@ -20,6 +20,7 @@ class fish:
         self.numberImage = 0
         self.lastChange = 0
         self.timeToChange = 100
+        
 
         if self.type=='big':
             self.imageList = [
@@ -38,9 +39,12 @@ class fish:
             ]
             self.vx = 10
 
-    def draw(self, surface, actualTime):
+    def draw(self, surface, actualTime, pygame):
         if self.state == 'hungry':
-            imageToDraw = self.imageList[self.numberImage]
+            if self.dir == 'right' :
+                imageToDraw = self.imageList[self.numberImage]
+            else:
+                imageToDraw = pygame.transform.flip(self.imageList[self.numberImage],True,False)
             rect = imageToDraw.get_rect()
             rect.center = (self.x, self.y)
             surface.blit(imageToDraw, rect)
@@ -64,3 +68,6 @@ class fish:
             return True
         else:
             return False
+    
+        
+        

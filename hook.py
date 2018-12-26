@@ -161,7 +161,7 @@ def inGame():
         player.draw(surface, GAME_TIME.get_ticks())
         player.move(moveList[i])
     for i, enemy in enumerate(fishes):
-        enemy.draw(surface, GAME_TIME.get_ticks())
+        enemy.draw(surface, GAME_TIME.get_ticks(),pygame)
         enemy.move()
         if enemy.isDead(WINDOW_WIDTH):
             fishes.remove(enemy)

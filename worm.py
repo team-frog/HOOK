@@ -74,9 +74,8 @@ class worm:
         surface.blit(imageToDraw,rect)
         self.pygame.draw.line(surface, (0,50,20), [self.x + self.lineDisplacement, 0], [self.x + self.lineDisplacement, rect.top], 2)
         
-        
-        
-        
+
+         
         
 
 
