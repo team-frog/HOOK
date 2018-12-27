@@ -14,14 +14,14 @@ class worm:
         self.y = pos[1]
         self.vy = 0
         self.VMAX = 10
-        self.AC = 0.2
-        self.kill = False
+        self.AC = 0.5
         self.pygame = pygame
         self.nimage = 0 # Index of the list to draw the image
         self.lastChange = 0
         self.timeToChange = 250 # Time between animated images in miliseconds
         self.lineDisplacement = 6 # Los píxeles que se moverá la línea a la derecha
         self.WINDOW_HEIGHT = 700
+        self.SQUARES = ( (-20,-5,20,65) , (0,40,30,20) ) # Squares that define the vulnable part of the worm referred to the center. Format: (left, top, width, height)
         
         if self.type=='player1':
             self.imageList = [pygame.image.load("assets/images/worm/SMALLbigworm.png"),
@@ -73,9 +73,14 @@ class worm:
         rect.center = (self.x,self.y)
         surface.blit(imageToDraw,rect)
         self.pygame.draw.line(surface, (0,50,20), [self.x + self.lineDisplacement, 0], [self.x + self.lineDisplacement, rect.top], 2)
+        #self.pygame.draw.rect(surface, (255, 0, 0), [self.x + self.SQUARES[0][0], self.y + self.SQUARES[0][1], self.SQUARES[0][2], self.SQUARES[0][3]])
+        #self.pygame.draw.rect(surface, (255, 255, 0), [self.x + self.SQUARES[1][0], self.y + self.SQUARES[1][1], self.SQUARES[1][2], self.SQUARES[1][3]])
+    
+    def returnSquares(self):
+        toReturn = []
+        for sq in self.SQUARES:
+            toReturn.append((self.x + sq[0], self.y + sq[1], sq[2], sq[3]))
+        return toReturn           
         
-
-         
-        
-
-
+    def changeToDead(self):
+        self.state = 'dead'

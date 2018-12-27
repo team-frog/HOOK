@@ -44,7 +44,7 @@ POS_ONLYME = (int(WINDOW_WIDTH/2), int(WINDOW_HEIGHT/2))
 POS_P1 = (int(2*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
 POS_P2 = (int(3*WINDOW_WIDTH/5), int(WINDOW_HEIGHT/2))
 TIME_BETWEEN_FISHES_O = 5000
-DIFFICULTY = 0.95 # The near to 1 the easier. It will multiply to time_between_fishes every time a new fish is created
+DIFFICULTY = 0.97 # The near to 1 the easier. It will multiply to time_between_fishes every time a new fish is created
 MIN_TIME_BETWEEN_FISHES = 1000
 POSX_SCORE = 100
 POSY_SCORE = 100
@@ -60,7 +60,7 @@ surface = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT),pygame.RESIZABLE
 pygame.display.set_caption('HOOK')
 clock = GAME_TIME.Clock()
 pygame.font.init()
-textFont = pygame.font.SysFont("monospace", 50)
+textFont = pygame.font.Font("assets/fonts/Jelly Crazies.ttf", 20)
 
 # LOAD IMAGES
 
@@ -75,6 +75,19 @@ imagesBackground = [
                 pygame.image.load("assets/images/background/background2.png")
             ]
 
+imagesTitle = [
+                pygame.image.load("assets/images/background/title1.png"),
+                pygame.image.load("assets/images/background/title2.png"),
+                pygame.image.load("assets/images/background/title3.png"),
+                pygame.image.load("assets/images/background/title4.png"),
+                pygame.image.load("assets/images/background/title5.png"),
+                pygame.image.load("assets/images/background/title4.png"),
+                pygame.image.load("assets/images/background/title3.png"),
+                pygame.image.load("assets/images/background/title2.png")
+            ]
+
+stageToDraw = imagesTitle
+
 # LOAD SOUNDS
 
 #FUNCTIONS
@@ -84,19 +97,19 @@ def quitGame():
     sys.exit()
 
 def drawStage():
-    global surface, numberBackgroundImage, lastBackgroundChange
+    global surface, numberBackgroundImage, lastBackgroundChange, stageToDraw
     if GAME_TIME.get_ticks() - timeToChangeBackground > lastBackgroundChange:
         lastBackgroundChange = GAME_TIME.get_ticks()
         numberBackgroundImage += 1
-        numberBackgroundImage = numberBackgroundImage % len(imagesBackground)
-    imageToDraw = imagesBackground[numberBackgroundImage]
+        numberBackgroundImage = numberBackgroundImage % len(stageToDraw)
+    imageToDraw = stageToDraw[numberBackgroundImage]
     rect = imageToDraw.get_rect()
     rect.center = (WINDOW_WIDTH/2, WINDOW_HEIGHT/2)
     surface.blit(imageToDraw, rect)
 
 def welcomeScreen():
     global surface
-    renderedText = textFont.render("Press space", 1, (255,255,255))
+    renderedText = textFont.render("PRESS SPACE", 1, (255, 255, 255))
     rect = renderedText.get_rect()
     rect.center = (int(WINDOW_WIDTH/2),int(WINDOW_HEIGHT/2))
     surface.blit(renderedText,rect)
@@ -104,7 +117,7 @@ def welcomeScreen():
 
 def menuScreen():
     global surface, gameMode, downPressed, upPressed, wormSelect
-    messagesMenu = ['Only me', 'Two friends', 'Two enemies']
+    messagesMenu = ['ONLY ME', 'TWO FRIENDS', 'TWO ENEMIES']
     for i, message in enumerate(messagesMenu):
         if i == gameMode:
             renderedText = textFont.render(message, 1, (255,0,255))
@@ -161,8 +174,11 @@ def inGame():
         player.draw(surface, GAME_TIME.get_ticks())
         player.move(moveList[i])
     for i, enemy in enumerate(fishes):
-        enemy.draw(surface, GAME_TIME.get_ticks(),pygame)
+        enemy.draw(surface, GAME_TIME.get_ticks())
         enemy.move()
+        for player in players:
+            if enemy.eat(player.returnSquares()):
+                player.changeToDead()
         if enemy.isDead(WINDOW_WIDTH):
             fishes.remove(enemy)
             score += 1
@@ -199,6 +215,7 @@ while True:
         welcomeScreen()
         if spacePressed:
             spacePressed = False
+            stageToDraw = imagesBackground
             state = 'menuScreen'
     elif state == 'menuScreen':
         menuScreen()
