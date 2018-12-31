@@ -78,8 +78,9 @@ class worm:
     
     def returnSquares(self):
         toReturn = []
-        for sq in self.SQUARES:
-            toReturn.append((self.x + sq[0], self.y + sq[1], sq[2], sq[3]))
+        if self.state == 'living':
+            for sq in self.SQUARES:
+                toReturn.append((self.x + sq[0], self.y + sq[1], sq[2], sq[3]))
         return toReturn           
         
     def changeToDead(self):

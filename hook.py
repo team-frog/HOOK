@@ -6,7 +6,7 @@ Created on Sat Oct 06 2018
 @author: AMS, FMC
 """
 
-import pygame, sys, random
+import pygame, sys, random, csv
 import pygame.event as GAME_EVENTS
 import pygame.locals as GAME_GLOBALS
 import pygame.time as GAME_TIME
@@ -16,7 +16,7 @@ import fish, worm
 # VARIABLES
 
 state = 'welcomeScreen'
-gameMode = 0
+gameMode = 0 # 0: 'ONLY ME', 1: 'TWO FRIENDS', 2: 'TWO ENEMIES'
 
 spacePressed = False
 upPressed = False
@@ -32,6 +32,14 @@ players = []
 fishes = []
 last_fish = 0
 score = 0
+maxScoreSingle = 0
+maxScoreTeam = 0
+greatestHitsSingle = []
+greatestHitsTeam = []
+winner = 0
+
+name = [65, 65, 65, 65, 65, 65]
+indexName = 0
 
 # CONSTANTS
 
@@ -92,6 +100,46 @@ stageToDraw = imagesTitle
 
 #FUNCTIONS
 
+def indexScore():
+    if gameMode == 0:
+        listScore = greatestHitsSingle
+        index = 1
+    else:
+        listScore = greatestHitsTeam
+        index = 2
+    for k, comp in enumerate(listScore):
+        toReturn = len(listScore) # It will return a 5 if score is too low to be in the hall of fame
+        if int(comp[index])<= score:
+            toReturn = k
+            break   
+    return toReturn
+        
+def enterScore():
+    global greatestHitsSingle, greatestHitsTeam, score
+    newPos = indexScore()
+    tam = len(greatestHitsTeam)          
+    for k in range(tam-newPos-1):
+        if gameMode == 0:
+            greatestHitsSingle[tam-1-k] = greatestHitsSingle[tam-2-k]
+        else:
+            greatestHitsTeam[tam-1-k] = greatestHitsTeam[tam-2-k]
+    if gameMode == 0:
+        greatestHitsSingle[newPos]= [chr(name[0])+chr(name[1])+chr(name[2]), str(score)]
+    else:
+        greatestHitsTeam[newPos] = [chr(name[0])+chr(name[1])+chr(name[2]), chr(name[3])+chr(name[4])+chr(name[5]), str(score)]
+
+
+def newGame():
+    global players, fishes, score, greatestHitsSingle, greatestHitsTeam, winner, indexName
+    players = []
+    fishes = []
+    score = 0
+    winner = 0
+    with open('scoreSigle.csv', 'r') as csvfile:
+        greatestHitsSingle = list(csv.reader(csvfile, delimiter=';'))
+    with open('scoreTeam.csv', 'r') as csvfile:
+        greatestHitsTeam = list(csv.reader(csvfile, delimiter=';'))
+    indexName = 0
 def quitGame():
     pygame.quit()
     sys.exit()
@@ -114,7 +162,79 @@ def welcomeScreen():
     rect.center = (int(WINDOW_WIDTH/2),int(WINDOW_HEIGHT/2))
     surface.blit(renderedText,rect)
 
+def twoEnemiesScreen():
+    global surface
+    renderedText = textFont.render("WINNER PLAYER " + str(winner), 1, (255, 255, 255))
+    rect = renderedText.get_rect()
+    rect.center = (int(WINDOW_WIDTH/2),int(WINDOW_HEIGHT/2))
+    surface.blit(renderedText,rect)
 
+def hallOfFameScreen():
+    global surface, greatestHitsSingle, greatestHitsTeam
+    renderedText = textFont.render('HALL OF FAME', 1, (255, 255, 255))
+    rect = renderedText.get_rect()
+    rect.center = (int(WINDOW_WIDTH/2),int(1*WINDOW_HEIGHT/8))
+    surface.blit(renderedText,rect)
+    renderedText = textFont.render('ONE PLAYER', 1, (255, 255, 0))
+    rect = renderedText.get_rect()
+    rect.center = (int(1*WINDOW_WIDTH/4),int(2*WINDOW_HEIGHT/8))
+    surface.blit(renderedText,rect)
+    for k, line in enumerate(greatestHitsSingle):
+        renderedText = textFont.render(line[0] + '   ' + line[1], 1, (255, 0, 0))
+        rect = renderedText.get_rect()
+        rect.center = (int(1*WINDOW_WIDTH/4),int((3+k)*WINDOW_HEIGHT/8))
+        surface.blit(renderedText,rect)
+    renderedText = textFont.render('TWO PLAYER', 1, (255, 255, 0))
+    rect = renderedText.get_rect()
+    rect.center = (int(3*WINDOW_WIDTH/4),int(2*WINDOW_HEIGHT/8))
+    surface.blit(renderedText,rect)
+    for k, line in enumerate(greatestHitsTeam):
+        renderedText = textFont.render(line[0] + ', ' + line[1] + '   ' + line[2], 1, (255, 0, 0))
+        rect = renderedText.get_rect()
+        rect.center = (int(3*WINDOW_WIDTH/4),int((3+k)*WINDOW_HEIGHT/8))
+        surface.blit(renderedText,rect)
+
+def enterName():
+    global surface, indexName, upPressed, downPressed, spacePressed, state
+    renderedText = textFont.render('COGRATULATIONS', 1, (255, 255, 255))
+    rect = renderedText.get_rect()
+    rect.center = (int(WINDOW_WIDTH/2),int(1*WINDOW_HEIGHT/4))
+    surface.blit(renderedText,rect)
+    renderedText = textFont.render('YOU ARE IN THE HALL OF FAME', 1, (255, 255, 255))
+    rect = renderedText.get_rect()
+    rect.center = (int(WINDOW_WIDTH/2),int(2*WINDOW_HEIGHT/4))
+    surface.blit(renderedText,rect)
+    if gameMode == 0:
+        lastIndex = 3
+        listPoss = [6,7,8]
+    else:
+        lastIndex = 6
+        listPoss = [4, 5, 6, 10, 11, 12]
+    for k in range(lastIndex):
+        if k == indexName:
+            renderedText = textFont.render(chr(name[k]), 1, (255, 255, 255))
+        else:
+            renderedText = textFont.render(chr(name[k]), 1, (255, 255, 0))
+        rect = renderedText.get_rect()
+        rect.center = (int(listPoss[k]*WINDOW_WIDTH/15),int(3*WINDOW_HEIGHT/4))
+        surface.blit(renderedText,rect)
+
+    if upPressed:
+        upPressed = False
+        if name[indexName] < 90:
+            name[indexName] += 1
+    elif downPressed:
+        downPressed = False
+        if name[indexName] > 65:
+            name[indexName] -= 1
+    elif spacePressed:
+        spacePressed = False
+        indexName += 1
+        if indexName == lastIndex:
+            enterScore()
+            state = 'hallOfFameScreen'
+
+       
 def menuScreen():
     global surface, gameMode, downPressed, upPressed, wormSelect
     messagesMenu = ['ONLY ME', 'TWO FRIENDS', 'TWO ENEMIES']
@@ -158,7 +278,7 @@ def draw_score():
     surface.blit(renderedText,rect)
     
 def inGame():
-    global surface, spacePressed, upPressed, time_between_fishes, last_fish, time_between_fishes, fishes, score
+    global surface, spacePressed, upPressed, time_between_fishes, last_fish, time_between_fishes, fishes, score, state, stageToDraw, winner
     if GAME_TIME.get_ticks() - last_fish > time_between_fishes:
         fishes.append(fish.fish(random_type(),random_dir(),random_pos(WINDOW_HEIGHT),WINDOW_WIDTH,pygame))
         last_fish = GAME_TIME.get_ticks()
@@ -176,12 +296,28 @@ def inGame():
     for i, enemy in enumerate(fishes):
         enemy.draw(surface, GAME_TIME.get_ticks())
         enemy.move()
-        for player in players:
+        for k, player in enumerate(players):
             if enemy.eat(player.returnSquares()):
                 player.changeToDead()
+                enemy.changeToEating()
+                if gameMode == 2 : # mode two enemies, winner can be used in the next state
+                    if winner == 0 :
+                        if k == 0 : 
+                            winner = 2
+                        else:
+                            winner = 1
         if enemy.isDead(WINDOW_WIDTH):
-            fishes.remove(enemy)
-            score += 1
+            if enemy.isEating():
+                if gameMode == 2 :
+                    state = 'twoEnemiesScreen'
+                else: 
+                    if indexScore() == 5:
+                        state = 'hallOfFameScreen'
+                    else:
+                        state = 'enterName'
+            else:
+                score += 1
+            fishes.remove(enemy)          
     draw_score()
 
 
@@ -220,6 +356,7 @@ while True:
     elif state == 'menuScreen':
         menuScreen()
         if spacePressed:
+            newGame()
             if gameMode == 0: #only me
                 players.append(worm.worm('player1', POS_ONLYME, pygame))
             else:
@@ -232,8 +369,24 @@ while True:
             state = 'inGame'
     elif state == 'inGame':
         inGame()
-        
-
+    elif state == 'twoEnemiesScreen':
+        twoEnemiesScreen()
+        if spacePressed:
+            spacePressed = False
+            stageToDraw = imagesTitle
+            state = 'welcomeScreen'
+    elif state == 'hallOfFameScreen':
+        hallOfFameScreen()
+        if spacePressed:
+            spacePressed = False
+            stageToDraw = imagesTitle
+            state = 'welcomeScreen'
+    elif state == 'enterName':
+        enterName()
+        if spacePressed:
+            spacePressed = False
+            stageToDraw = imagesTitle
+            state = 'welcomeScreen'
 
     clock.tick(FPS)
     pygame.display.update()
