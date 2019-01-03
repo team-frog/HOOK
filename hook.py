@@ -157,9 +157,9 @@ def drawStage():
 
 def welcomeScreen():
     global surface
-    renderedText = textFont.render("PRESS SPACE", 1, (255, 255, 255))
+    renderedText = textFont.render("PRESS SPACE", 1, (162, 179, 254))
     rect = renderedText.get_rect()
-    rect.center = (int(WINDOW_WIDTH/2),int(WINDOW_HEIGHT/2))
+    rect.center = (int(WINDOW_WIDTH/2),int(WINDOW_HEIGHT/3))
     surface.blit(renderedText,rect)
 
 def twoEnemiesScreen():
@@ -240,9 +240,9 @@ def menuScreen():
     messagesMenu = ['ONLY ME', 'TWO FRIENDS', 'TWO ENEMIES']
     for i, message in enumerate(messagesMenu):
         if i == gameMode:
-            renderedText = textFont.render(message, 1, (255,0,255))
-        else:
             renderedText = textFont.render(message, 1, (255,255,255))
+        else:
+            renderedText = textFont.render(message, 1, (162, 179, 254))
         rect = renderedText.get_rect()
         rect.center = (int(WINDOW_WIDTH/2),int((i+1)*WINDOW_HEIGHT/(len(messagesMenu)+1)))
         surface.blit(renderedText,rect)
@@ -272,7 +272,7 @@ def random_pos(window_height):
 
 def draw_score():
     global score, surface
-    renderedText = textFont.render(str(score), 1, (255,0,255))
+    renderedText = textFont.render(str(score), 1, (206, 213, 255))
     rect = renderedText.get_rect()
     rect.center = (POSX_SCORE,POSY_SCORE)
     surface.blit(renderedText,rect)

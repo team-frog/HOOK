@@ -43,7 +43,7 @@ class worm:
                 ]
             self.lineDisplacement = 8 # El desplazamiento de la línea a la derecha en el Type: 'sel'
         
-        self.imageDead = pygame.image.load("assets/images/worm/expl8.png")
+        self.imageDead = pygame.image.load("assets/images/worm/emptyHook.png")
         self.state = 'living'
         
 

@@ -18,6 +18,22 @@
    sodipodi:docname="HOOK_DRAWS.svg">
   <defs
      id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient7876">
+      <stop
+         style="stop-color:#ff8080;stop-opacity:1;"
+         offset="0"
+         id="stop7878" />
+      <stop
+         style="stop-color:#ff0000;stop-opacity:1"
+         offset="1"
+         id="stop7880" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect6932"
+       is_visible="true" />
     <inkscape:path-effect
        effect="spiro"
        id="path-effect8158"
@@ -8691,6 +8707,91 @@
        id="linearGradient15875"
        xlink:href="#linearGradient5428-9-5-6-8-3"
        inkscape:collect="always" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3955-5-6"
+       id="linearGradient3961-2-3"
+       x1="1780.8989"
+       y1="2311.0122"
+       x2="2032.4269"
+       y2="2647.3931"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1,0,0,0.95522705,186.94189,105.95908)" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3955-5-6">
+      <stop
+         style="stop-color:#808080;stop-opacity:1;"
+         offset="0"
+         id="stop3957-9-7" />
+      <stop
+         style="stop-color:#000000;stop-opacity:1"
+         offset="1"
+         id="stop3959-1-5" />
+    </linearGradient>
+    <linearGradient
+       y2="2647.3931"
+       x2="2032.4269"
+       y1="2311.0122"
+       x1="1780.8989"
+       gradientTransform="matrix(1,0,0,0.95522705,423.53601,109.70299)"
+       gradientUnits="userSpaceOnUse"
+       id="linearGradient6685"
+       xlink:href="#linearGradient3955-5-6"
+       inkscape:collect="always" />
+    <linearGradient
+       gradientTransform="matrix(0.83421907,0,0,0.83421907,-350.22198,1105.2661)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4273-2-8-09"
+       id="linearGradient4279-1-1-27"
+       x1="2290.4165"
+       y1="2374.3083"
+       x2="2278.7537"
+       y2="2388.6628"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4273-2-8-09">
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:1;"
+         offset="0"
+         id="stop4275-0-7-3" />
+      <stop
+         style="stop-color:#666666;stop-opacity:1"
+         offset="1"
+         id="stop4277-6-4-6" />
+    </linearGradient>
+    <linearGradient
+       gradientTransform="matrix(0.83421907,0,0,0.83421907,-350.22198,1105.2661)"
+       inkscape:collect="always"
+       xlink:href="#linearGradient4332-6-5-79"
+       id="linearGradient4339-9-5-8"
+       x1="2310.1538"
+       y1="2376.6636"
+       x2="2295.1267"
+       y2="2396.1765"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient4332-6-5-79">
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:1;"
+         offset="0"
+         id="stop4334-0-0-2" />
+      <stop
+         style="stop-color:#666666;stop-opacity:1"
+         offset="1"
+         id="stop4336-6-1-02" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient7876"
+       id="linearGradient7882"
+       x1="1434.5427"
+       y1="3136.2061"
+       x2="1662.8611"
+       y2="3127.915"
+       gradientUnits="userSpaceOnUse" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -8699,9 +8800,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.25000001"
-     inkscape:cx="5987.486"
-     inkscape:cy="-3406.1038"
+     inkscape:zoom="4.0000002"
+     inkscape:cx="1506.2884"
+     inkscape:cy="-1943.0676"
      inkscape:document-units="px"
      inkscape:current-layer="layer4"
      showgrid="false"
@@ -8788,12 +8889,13 @@
        inkscape:export-xdpi="52.563148"
        inkscape:export-ydpi="52.563148" />
     <path
-       style="fill:url(#linearGradient3427);fill-opacity:1;stroke:#000000;stroke-width:0.97263264999999999;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
-       d="M 1551.3125 2268.4375 C 1546.0216 2268.5745 1540.5943 2271.2396 1538.7188 2274.4062 C 1533.4435 2283.2058 1535.9735 2292.604 1537.5312 2294.75 C 1538.8229 2296.7436 1544.5571 2302.7156 1543.5938 2305.7188 C 1542.46 2323.1409 1547.8188 2335.8214 1551.1562 2348.1562 C 1556.1819 2362.6845 1567.8392 2383.5227 1571.875 2388.2812 C 1589.6174 2411.1517 1587.9262 2427.3959 1582.4688 2437.7188 C 1580.7132 2442.5493 1574.1124 2459.2384 1543.375 2463.0625 C 1529.5497 2465.5388 1514.3565 2456.9173 1512.4375 2455.9375 C 1501.8707 2450.0172 1495.7397 2440.8891 1492.8125 2429.7812 C 1491.9728 2426.4194 1491.9662 2421.8332 1492.3125 2416.7188 C 1494.209 2419.5484 1496.69 2420.4713 1499.25 2421.1562 C 1494.5262 2410.4425 1492.5489 2395.9574 1483.9375 2391.0312 C 1474.6407 2446.7978 1494.74 2466.7076 1522.875 2472.5938 C 1547.7559 2477.1458 1571.433 2469.6077 1588.6875 2451.4062 C 1598.9516 2437.3673 1601.0652 2428.233 1600.4062 2418.375 C 1600.6982 2405.6514 1582.4535 2382.2488 1580.9688 2379.6562 C 1572.1309 2366.6499 1565.995 2353.8739 1559.5 2334.875 C 1554.2251 2314.3436 1555.2412 2316.5189 1555.4375 2306.6562 C 1555.5055 2300.3798 1569.4873 2295.6518 1562.4688 2275.3438 C 1560.5552 2270.1711 1555.9809 2268.3166 1551.3125 2268.4375 z M 1551.0938 2276.6875 C 1557.2999 2276.6668 1555.1184 2291.4684 1553.6875 2295.125 C 1552.9026 2296.8532 1548.3188 2298.3549 1547.1875 2294.2812 C 1545.6675 2290.3324 1544.2668 2277.5678 1550.4688 2276.75 C 1550.6867 2276.7176 1550.8936 2276.6882 1551.0938 2276.6875 z "
+       style="fill:url(#linearGradient3427);fill-opacity:1;stroke:#000000;stroke-width:0.97263265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 1551.3125,2268.4375 c -5.2909,0.137 -10.7182,2.8021 -12.5937,5.9687 -5.2753,8.7996 -2.7453,18.1978 -1.1876,20.3438 1.2917,1.9936 7.0259,7.9656 6.0626,10.9688 -1.1338,17.4221 4.225,30.1026 7.5624,42.4374 5.0257,14.5283 16.683,35.3665 20.7188,40.125 17.7424,22.8705 16.0512,39.1147 10.5938,49.4376 -1.7556,4.8305 -8.3564,21.5196 -39.0938,25.3437 -13.8253,2.4763 -29.0185,-6.1452 -30.9375,-7.125 -10.5668,-5.9203 -16.6978,-15.0484 -19.625,-26.1563 -0.8397,-3.3618 -0.8463,-7.948 -0.5,-13.0624 1.8965,2.8296 4.3775,3.7525 6.9375,4.4374 -4.7238,-10.7137 -6.7011,-25.1988 -15.3125,-30.125 -9.2968,55.7666 10.8025,75.6764 38.9375,81.5626 24.8809,4.552 48.558,-2.9861 65.8125,-21.1876 10.2641,-14.0389 12.3777,-23.1732 11.7187,-33.0312 0.292,-12.7236 -17.9527,-36.1262 -19.4374,-38.7188 -8.8379,-13.0063 -14.9738,-25.7823 -21.4688,-44.7812 -5.2749,-20.5314 -4.2588,-18.3561 -4.0625,-28.2188 0.068,-6.2764 14.0498,-11.0044 7.0313,-31.3124 -1.9136,-5.1727 -6.4879,-7.0272 -11.1563,-6.9063 z m -0.2187,8.25 c 6.2061,-0.021 4.0246,14.7809 2.5937,18.4375 -0.7849,1.7282 -5.3687,3.2299 -6.5,-0.8438 -1.52,-3.9488 -2.9207,-16.7134 3.2813,-17.5312 0.2179,-0.032 0.4248,-0.062 0.625,-0.062 z"
        id="path3776-6"
        inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/worm/SMALLbigworm.png"
        inkscape:export-xdpi="52.563148"
-       inkscape:export-ydpi="52.563148" />
+       inkscape:export-ydpi="52.563148"
+       inkscape:connector-curvature="0" />
     <path
        style="fill:url(#linearGradient3993-1);fill-opacity:1;stroke:#000000;stroke-width:0.98909813;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
        d="m 1526.5247,2365.889 c -6.1047,-0.5852 -6.7898,6.4575 -7.4732,8.6836 -6.2393,18.1796 -4.2231,16.3288 -6.6124,23.5177 -2.144,9.8571 -1.5871,18.9174 -1.1998,29.8587 0.4657,7.4796 3.1279,20.2003 5.9736,28.7762 2.6006,6.352 3.4374,14.039 7.3792,18.3323 1.7341,1.4278 3.623,2.8662 7.5548,2.7451 0.026,0.2886 7.282,0.215 10.5416,-6.689 1.573,-4.1085 3.2101,-8.3583 7.2034,-10.5745 3.9293,-1.926 4.9562,-1.1314 6.7974,-0.3164 4.0345,-1.532 8.0525,-3.1426 11.2847,-5.4022 -0.2263,-0.5891 -1.7318,-2.1234 -4.35,-4.7145 -1.8224,-1.7153 -3.5291,-3.2146 -8.0314,-3.9725 -1.0501,-0.032 -5.9017,-0.7215 -10.9658,1.6903 -2.4736,1.2531 -4.2859,4.1965 -6.4419,8.0988 -1.1729,1.9354 -7.1013,6.1064 -8.7874,-2.5682 -0.6959,-4.1415 -0.7909,-6.8568 -1.4997,-10.6242 -0.9778,-6.5803 -1.3612,-12.3861 -1.7304,-21.3687 -0.068,-7.0745 -1.1653,-13.6139 0.7965,-22.189 1.0012,-4.4177 1.7848,-8.1141 2.8516,-12.4812 0.7413,-3.035 1.0295,-6.5708 1.7102,-10.3853 1.1205,-3.5201 1.8311,-9.9459 -5.001,-10.417 z"
@@ -10032,12 +10134,284 @@
        inkscape:export-xdpi="52.563148"
        inkscape:export-ydpi="52.563148"
        clip-path="url(#clipPath6882)" />
+    <path
+       inkscape:connector-curvature="0"
+       style="fill:url(#linearGradient6685);fill-opacity:1;stroke:#000000;stroke-width:0.97263265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 2205.094,2271.1814 c -5.2909,0.137 -10.7182,2.7708 -12.5938,5.9375 -5.2752,8.7995 -2.7452,18.229 -1.1874,20.375 1.2916,1.9936 7.0258,7.9344 6.0624,10.9375 -1.1337,17.4222 4.2251,30.1338 7.5626,42.4687 5.0256,14.5283 16.6829,35.3666 20.7187,40.125 17.7424,22.8705 16.0512,39.1146 10.5937,49.4376 -1.7555,4.8305 -8.3563,21.5196 -39.0937,25.3437 -13.8253,2.4763 -29.0185,-6.1452 -30.9375,-7.125 -10.5668,-5.9203 -16.6978,-15.0483 -19.625,-26.1563 -0.8397,-3.3618 -0.8463,-7.948 -0.5,-13.0624 1.8965,2.8296 4.3775,3.7525 6.9375,4.4374 -4.7238,-10.7137 -6.7011,-25.1988 -15.3125,-30.125 -9.2968,55.7666 10.8025,75.6763 38.9375,81.5626 24.8809,4.552 48.558,-2.986 65.8125,-21.1876 10.2641,-14.0389 12.3777,-23.2045 11.7188,-33.0624 0.2919,-12.7236 -17.9529,-36.1262 -19.4376,-38.7188 -8.8378,-13.0063 -14.9737,-25.7823 -21.4687,-44.7812 -5.2749,-20.5314 -4.2588,-18.3561 -4.0625,-28.2188 0.068,-6.2765 14.0499,-11.0045 7.0312,-31.3125 -1.9135,-5.1727 -6.4878,-6.9959 -11.1562,-6.875 z m -0.2188,8.25 c 6.2062,-0.021 4.0247,14.7809 2.5938,18.4375 -0.7849,1.7282 -5.3687,3.2299 -6.5,-0.8438 -1.52,-3.9488 -2.9207,-16.7134 3.2812,-17.5312 0.218,-0.032 0.4249,-0.062 0.625,-0.062 z"
+       id="path3776-4-3"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/worm/emptyHook.png"
+       inkscape:export-xdpi="52.563095"
+       inkscape:export-ydpi="52.563095" />
+    <path
+       style="fill:none;stroke:#4d4d4d;stroke-width:0.97263265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 2203.8036,2280.5133 c 1.5989,-4.0362 1.4816,-7.7162 1.0733,-10.6709"
+       id="path3896-9-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/worm/emptyHook.png"
+       inkscape:export-xdpi="52.563095"
+       inkscape:export-ydpi="52.563095" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.97263265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 2204.7324,2280.6284 c 1.5989,-4.0361 1.4816,-7.7162 1.0733,-10.6708"
+       id="path3896-7-2-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/worm/emptyHook.png"
+       inkscape:export-xdpi="52.563095"
+       inkscape:export-ydpi="52.563095" />
+    <path
+       style="fill:none;stroke:#4d4d4d;stroke-width:0.97263265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 2205.6871,2280.6833 c 1.5989,-4.0362 1.4816,-7.7163 1.0733,-10.671"
+       id="path3896-5-6-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/worm/emptyHook.png"
+       inkscape:export-xdpi="52.563095"
+       inkscape:export-ydpi="52.563095" />
+    <path
+       style="fill:none;stroke:#333333;stroke-width:0.97263265;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 2206.5755,2281.0166 c 1.5989,-4.0363 1.4816,-7.7163 1.0733,-10.6709"
+       id="path3896-3-8-91"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/worm/emptyHook.png"
+       inkscape:export-xdpi="52.563095"
+       inkscape:export-ydpi="52.563095" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.76317263px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1454.958,3085.3009 c 24.1806,2.8336 33.108,20.0334 31.7526,25.1351 l -0.6615,38.6437 c -7.6349,13.1895 -20.9107,20.4004 -35.0603,26.6853 2.3171,-3.0786 5.5072,-6.0354 6.4829,-9.301 -1.1299,-2.2362 -3.0624,-4.0246 -5.689,-5.4256 1.5893,-3.7399 3.6072,-5.8657 5.689,-7.751 -2.1745,-2.5751 -3.9208,-5.419 -7.012,-7.4188 0.7762,-3.5604 3.3693,-5.3469 5.5566,-7.5295 -1.9049,-2.5962 -4.1968,-4.6527 -5.4243,-8.1938 1.1219,-1.5007 1.8607,-3.6431 3.969,-5.3149 -2.7218,-2.7154 -4.5205,-5.8439 -4.4982,-7.7508 1.6674,-2.5384 4.0655,-3.8276 6.0858,-5.4257 -2.9588,-3.7606 -3.5668,-5.7964 -5.0275,-7.1972 1.0489,-2.4765 1.7355,-4.4655 5.4245,-8.3046 0.3345,-4.4527 -0.9206,-7.614 -1.5876,-10.8512 z"
+       id="path3236-5-37"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccccccccccc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.76317263px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1456.2381,3096.0819 c 20.1629,2.9137 26.8652,12.7169 30.1238,17.3818"
+       id="path3238-4-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.76317263px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1455.9574,3111.6629 c 10.5623,-1.0287 19.17,1.2142 27.785,3.4449"
+       id="path3242-6-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.76317263px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1454.2735,3124.8166 c 8.3376,-0.3467 17.1615,-0.1237 27.972,2.4271"
+       id="path3245-6-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.76317263px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1455.7703,3138.2835 c 8.6369,-0.2763 17.2262,-0.1164 26.1011,-2.5838"
+       id="path3247-3-28"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.76317263px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1457.4542,3153.4729 c 11.6477,-1.8867 19.752,-5.5528 25.1656,-10.57"
+       id="path3249-9-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.76317263px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1457.4542,3166.3917 c 12.8213,-4.1659 21.443,-13.8789 26.756,-19.4957"
+       id="path3251-9-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#800000;stroke:#000000;stroke-width:0.76646167px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1482.5015,3101.09 c 2.4891,-3.5186 21.5682,-15.1309 39.8219,-17.4205 22.1639,-0.7031 41.0973,2.0499 49.5827,11.214 6.3266,3.4774 6.2303,-1.0811 17.2136,10.4244 9.6239,11.0671 13.818,37.5977 -2.9937,55.2806 -14.25,11.3738 -31.6937,19.7436 -63.2412,14.8468 -42.0152,-6.1572 -46.3777,-36.4353 -47.5245,-41.0657 -3.3367,-8.9388 -1.9906,-24.2838 7.1412,-33.2796 z"
+       id="path4131-5-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccccccc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:url(#linearGradient4339-9-5-8);fill-opacity:1;stroke:#000000;stroke-width:0.77446824px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1567.8049,3090.3572 c 0.352,12.3529 15.7575,10.0246 16.1234,0.273 1.3751,-11.8386 -16.5626,-11.6237 -16.1234,-0.273 z"
+       id="path3254-6-2-6"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.8342191px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1498.7651,3071.5783 c 18.756,6.2278 18.0716,10.075 19.663,14.201 4.1212,2.9783 16.9114,3.1889 22.394,0.4097 -2.6269,-10.8063 -21.862,-23.1862 -42.057,-14.6107 z"
+       id="path3248-0-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.8342191px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1535.7698,3087.691 c -4.8498,-18.9022 -24.3222,-19.258 -36.7315,-16.1127 11.1779,-0.676 30.0042,2.2121 32.3619,16.5224"
+       id="path3250-9-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.8342191px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1499.3113,3071.4417 c 19.108,1.8085 23.893,8.9829 25.8077,16.5224"
+       id="path3252-9-1"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:url(#linearGradient4279-1-1-27);fill-opacity:1;stroke:#000000;stroke-width:0.8342191px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1552.5822,3088.3907 c 0.4084,12.353 18.2827,10.0247 18.7072,0.2731 1.5955,-11.8386 -19.2167,-11.6237 -18.7072,-0.2731 z"
+       id="path3254-1-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:0.74343681px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1520.482,3126.7161 c -0.022,17.8608 -9.0421,26.3526 -11.2935,30.3577 14.7918,3.7093 26.5728,-9.1925 29.1995,-23.0138 -1.0864,-2.1373 -7.7103,-7.796 -17.906,-7.3439 z"
+       id="path3230-3-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.74343681px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1509.4114,3157.0738 c 12.4437,-8.1182 15.7932,-20.2198 16.7173,-29.89"
+       id="path3232-4-7"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.74343681px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1531.9611,3129.1017 c -4.0727,15.6387 -10.7322,26.5174 -22.5125,27.9721"
+       id="path3234-5-8"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1.06835628px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1561.6134,3086.3396 -2.6624,1.1236 c -0.2244,-0.043 1.6651,0.6481 2.6052,0.8377 -0.688,2.1924 -4.6852,1.557 -5.1056,-0.1859 -0.9934,-3.0611 4.8807,-4.5599 5.1628,-1.7754 z"
+       id="path3223-4-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848" />
+    <path
+       style="fill:#000000;stroke:#000000;stroke-width:1.00810218px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;display:inline"
+       d="m 1581.1651,3092.9095 -2.6593,0.1772 c -0.1814,-0.1093 1.2442,1.1214 2.0016,1.5936 -1.2772,1.7807 -4.5496,-0.071 -4.3739,-1.7948 0.087,-3.1083 5.6502,-2.6056 5.0316,0.024 z"
+       id="path3223-3-9-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc"
+       inkscape:export-xdpi="43.318848"
+       inkscape:export-ydpi="43.318848"
+       inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/fishes/smallFish1.png" />
+    <path
+       style="fill:#445500;fill-opacity:1;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1596.8327,3145.4714 c -1.3648,0.5835 -0.9341,2.142 -9.5334,2.1857 -7.3835,-0.7822 -9.9298,-8.1003 -10.8048,-13.2191 0.1146,-6.1298 -2.4301,-15.7064 2.0285,-19.8312 5.1296,-4.4191 10.6841,-3.2829 14.7653,-3.8569 4.8273,-0.072 5.8066,2.2038 6.4524,3.7123 1.3745,3.938 0.4589,6.8251 -1.6794,9.3692 l -0.5304,9.8995 c 0.6115,3.8258 3.2894,8.3362 -0.6982,11.7405 z"
+       id="path7729"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccccc" />
+    <path
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:1.2330538px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1581.4607,3119.8293 c 1.9643,-4.1299 6.5889,-4.7432 10.2992,-4.9731 4.1632,-0.06 4.064,4.2968 3.8884,7.9118 l -4.5189,2.2605 z"
+       id="path7742"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccc" />
+    <path
+       style="fill:#1a1a1a;stroke:#000000;stroke-width:1.15488422px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1583.1861,3131.6734 c 0.2229,4.805 -0.2125,8.4406 4.858,11.3681 3.2063,0.6051 8.3717,1.0299 7.8698,-6.1131 l 1.5546,-5.1477 -1.0687,-4.5043 -6.8012,-0.9653 z"
+       id="path7744"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="ccccccc" />
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="Capa 0"
      style="opacity:1">
+    <path
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.49322152000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1584.2456,3116.4386 c 1.8732,2.7928 0.5857,4.1243 0.3616,6.8191"
+       id="path7748"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.49322152000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1586.6629,3115.7039 c 1.1257,2.5807 0.7406,3.8827 0.3152,6.4635"
+       id="path7750"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.49322152000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1589.3428,3115.0823 c 0.7595,2.1876 1.1574,4.3752 0.3317,6.5628"
+       id="path7752"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.49322152000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1592.7583,3115.0823 c -0.1106,2.7367 0.2165,3.7435 -0.9331,6.3796"
+       id="path7754"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.49322152000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1585.7137,3116.3122 c 1.1258,2.5807 0.7406,3.8827 0.3152,6.4635"
+       id="path7750-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.49322152000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1588.0545,3115.5131 c 1.1257,2.5807 0.7406,3.8827 0.3152,6.4635"
+       id="path7750-0-3"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.49322152000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1590.7669,3115.1135 c 1.1257,2.5807 0.7406,3.8827 0.3152,6.4635"
+       id="path7750-0-0"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="display:inline;opacity:1;fill:none;stroke:#000000;stroke-width:0.49322152000000002;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1594.1433,3115.7234 c 0.447,2.8098 -0.2461,3.9548 -1.2945,6.3209"
+       id="path7750-0-04"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
     <path
        style="fill:#ffcc00;stroke:#000000;stroke-width:0.16418522999999999px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
        d="m 2220.3173,2175.5771 c -1.2881,-0.1695 -3.8681,0.6687 -8.7208,-1.0577 -1.6344,-0.5814 -2.363,-2.3109 -6.8445,-0.5349 -2.3717,0.9399 -5.6138,-0.1798 -6.5657,-0.3085 -2.1709,-0.2933 -3.6716,-2.1363 -6.7086,-0.083 -2.185,1.4773 -5.1449,1.0875 -7.4756,0.259 -2.3355,-0.8302 -4.9931,-0.3537 -7.0297,0.7338 -2.0388,1.0886 -4.1906,1.1238 -6.0967,1.2932 -2.2637,0.2012 -4.2142,1.4788 -5.7405,2.4995 1.2177,1.5439 2.3871,3.917 4.3156,4.0674 3.1278,0.2442 4.3615,1.4702 5.5378,3.0937 1.4584,2.013 3.507,2.5989 5.6274,2.0124 1.7931,-0.4959 3.9608,0.075 5.5338,1.3534 1.9921,1.6194 4.5273,1.4714 7.0975,1.1841 1.8739,-0.2096 4.1111,-0.6296 5.6095,0.665 1.7659,1.5258 3.5182,0.8684 5.2377,0.503 2.033,-0.432 4.3962,-0.7091 6.0073,0.5405 2.6766,2.076 3.7379,0.5911 5.3135,0.5618 1.6552,-0.031 3.1925,0.4298 4.6116,0.6983 6.2423,1.1603 5.2779,-17.1522 0.2904,-17.481 z"
@@ -28365,6 +28739,60 @@
        inkscape:export-filename="/home/pi/programas_python/juegosEnPython/HOOK/assets/images/background/title5.png"
        inkscape:export-xdpi="89.997192"
        inkscape:export-ydpi="89.997192" />
+    <path
+       style="opacity:1;fill:url(#linearGradient7882);stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 1599.4999,3138.1121 c -3.6783,2.1178 -6.4279,-10.9451 -13.7751,-6.4978 -5.101,3.0012 -12.3574,8.6159 -21.5408,6.7352 -1.3215,0.2447 -15.2464,-6.1173 -23.6841,-3.2352 -1.9787,0.6759 -19.1613,5.0309 -25.5,5.9978 -8.0062,1.075 -15.8474,0.8853 -23.5,-0.75 -9.2691,-0.9532 -9.7806,-17.8878 -1.5,-16.25 8.3116,0.605 15.6231,2.2102 25.75,1 8.8211,-0.7745 16.2785,-4.2764 24.25,-6.75 9.0181,-2.3469 17.039,0.2921 24.6486,4.9874 6.7164,3.7954 13.0624,-1.0913 20.3514,-4.9874 6.9799,-3.261 10.63,1.8691 14.7929,5.7071 2.4839,3.7559 2.2154,13.2179 -0.2929,14.0429 z"
+       id="path6942"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cccsccccccccc" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1495.354,3124.5385 c 3.8322,3.5745 3.7341,15.5097 0,16.2635"
+       id="path6945"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1508.789,3125.776 c 5.97,4.1458 4.2518,12.8975 1.8562,15.6447"
+       id="path6947"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1524.9641,3123.3011 c 4.4223,0.8726 6.9077,12.7389 3.3588,14.8492"
+       id="path6949"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1539.4598,3118.7049 c 1.7722,-0.5305 6.4749,10.1813 3.7123,15.5563"
+       id="path6951"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1554.9278,3118.7933 c 4.4708,3.3226 4.9337,12.4258 -1.6794,16.5286"
+       id="path6953"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1567.3021,3124.5385 c 1.5636,3.3205 4.4658,8.2731 -1.1802,14.1167"
+       id="path6955"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1577.0668,3122.6922 c 2.9615,-0.7448 8.2136,5.6116 5.4792,10.8981"
+       id="path6957"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="opacity:1;fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1594.128,3118.8816 c 1.5489,3.6612 3.2111,11.3199 -1.37,13.6119"
+       id="path6959"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
   </g>
   <g
      inkscape:label="Capa 1"
@@ -28565,5 +28993,60 @@
      inkscape:groupmode="layer"
      id="layer3"
      inkscape:label="Capa 2"
-     style="display:inline" />
+     style="display:inline">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4619537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1584.5463,3139.5024 c 0.8177,-1.1249 1.3711,-2.5782 1.4574,-4.6115"
+       id="path7756"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4619537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1586.2952,3141.969 c 0.8961,-1.7107 1.8111,-3.408 1.4574,-6.0057"
+       id="path7758"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4619537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1588.5298,3143.3633 c 0.4995,-1.6011 1.5386,-2.2152 1.538,-5.5454"
+       id="path7760"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4619537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       d="m 1591.4447,3142.9879 c 0.5638,-1.1067 0.8777,-3.0763 0.526,-4.7892"
+       id="path7762"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4619537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 1585.2407,3141.3474 c 0.8961,-1.7107 1.8111,-3.408 1.4574,-6.0057"
+       id="path7758-5"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4619537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 1587.3018,3143.2433 c 0.8961,-1.7107 1.8111,-3.4081 1.4573,-6.0057"
+       id="path7758-4"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4619537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 1589.7063,3143.6983 c 0.8961,-1.7107 1.8111,-3.408 1.4574,-6.0057"
+       id="path7758-2"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4619537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 1583.6605,3139.2241 c 0.8961,-1.7107 1.8111,-3.4081 1.4574,-6.0057"
+       id="path7758-49"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:0.4619537;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;display:inline"
+       d="m 1592.0908,3143.447 c 0.8961,-1.7107 1.8111,-3.408 1.4574,-6.0057"
+       id="path7758-9"
+       inkscape:connector-curvature="0"
+       sodipodi:nodetypes="cc" />
+  </g>
 </svg>
